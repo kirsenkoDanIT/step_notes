@@ -1,3 +1,10 @@
-.block-height{
-    height: 50px ;
+.block-height {
+    height: 50px;
 }
+
+.hide-text {
+    height: 50px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
