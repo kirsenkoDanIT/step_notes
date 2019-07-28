@@ -14,7 +14,9 @@ router.get('/notes/create', (req, res) => {
     res.render('notes-create', {
         pageTitle: 'notes create'
     })
-}).post('/notes/create', async (req, res) => {
+})
+
+router.post('/create_note', async (req, res) => {
     const note = new Note({
         title: req.body.title,
         body: req.body.body

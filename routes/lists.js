@@ -17,7 +17,9 @@ router.get('/lists/create', (req, res) => {
     res.render('lists-create', {
         pageTitle: 'lists create'
     })
-}).post('/list/create', async (req, res) => {
+})
+
+router.post('/create_list', async (req, res) => {
     const list = new List({
         text: req.body.text
     })
