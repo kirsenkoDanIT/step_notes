@@ -6,6 +6,9 @@
              <input type="checkbox" name="" id="">
              <span><%= item.text%></span>
          </label>
+         <button type="button" class="close" aria-label="Close">
+             <span aria-hidden="true">&times;</span>
+         </button>
      </li>
      <% })%>
  </ol>
@@ -13,5 +16,6 @@
  <p>Empty</p>
  <% }%>
  <div class="row block-height">
-     <a href="/lists/create" class="btn btn-primary btn-lg active w-100 fixed-bottom" role="button" aria-pressed="true">Create list</a>
+     <a href="/lists/create" class="btn btn-primary btn-lg active w-100 fixed-bottom" role="button"
+         aria-pressed="true">Create list</a>
  </div>
