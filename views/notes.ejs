@@ -1,0 +1,19 @@
+<% if (notes.length) {%>
+<div class="row">
+    <% notes.forEach(item => {%>
+    <div class="card col-6 border border-primary">
+        <div class="card-body">
+            <h5 class="card-title"><%= item.title%></h5>
+            <p class="card-text"><%= item.body%></p>
+            <a href="#" class="btn btn-primary">Edit</a>
+        </div>
+    </div>
+    <% })%>
+</div>
+<% }else {%>
+<p>Empty</p>
+<% }%>
+<div class="row block-height">
+    <a href="/notes/create" class="btn btn-primary btn-lg active w-100 fixed-bottom " rdive="button"
+        aria-pressed="true">Create note</a>
+</div>

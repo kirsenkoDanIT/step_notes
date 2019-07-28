@@ -1,0 +1,17 @@
+ <% if (lists.length) {%>
+ <ol>
+     <% lists.forEach(item => {%>
+     <li>
+         <label>
+             <input type="checkbox" name="" id="">
+             <span><%= item.text%></span>
+         </label>
+     </li>
+     <% })%>
+ </ol>
+ <% }else {%>
+ <p>Empty</p>
+ <% }%>
+ <div class="row block-height">
+     <a href="/lists/create" class="btn btn-primary btn-lg active w-100 fixed-bottom" role="button" aria-pressed="true">Create list</a>
+ </div>
