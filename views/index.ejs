@@ -1,1 +1,35 @@
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste animi quod quisquam cumque sit doloribus necessitatibus cupiditate quaerat voluptate, consectetur ullam dicta praesentium sunt incidunt soluta reprehenderit explicabo dolorum enim. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta consequuntur explicabo perferendis. Facilis ducimus dolorum consequatur voluptatibus est ipsam eos dicta commodi provident quidem animi, ab voluptas magnam maiores. Adipisci! Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+<% if (lists.length) {%>
+<ol>
+    <% lists.splice(0, 4).forEach(item => {%>
+    <li>
+        <label>
+            <input type="checkbox" name="" id="">
+            <span><%= item.text%></span>
+        </label>
+        <button type="button" class="close" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </li>
+    <% })%>
+</ol>
+<% }else {%>
+<p>Empty</p>
+<% }%>
+<% if (notes.length) {%>
+<div class="row">
+    <% notes.splice(0, 4).forEach(item => {%>
+    <div class="card col-6 border border-primary">
+        <div class="card-body">
+            <button type="button" class="close" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <h5 class="card-title"><%= item.title%></h5>
+            <p class="card-text hide-text"><%= item.body%></p>
+            <a href="#" class="btn btn-primary">Edit</a>
+        </div>
+    </div>
+    <% })%>
+</div>
+<% }else {%>
+<p>Empty</p>
+<% }%>
