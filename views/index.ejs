@@ -1,6 +1,6 @@
-<% if (lists.length) {%>
+<% if (todos.length) {%>
 <ol>
-    <% lists.splice(0, 4).forEach(item => {%>
+    <% todos.splice(0, 4).forEach(item => {%>
     <li>
         <label>
             <input type="checkbox" name="" id="">
@@ -13,7 +13,7 @@
     <% })%>
 </ol>
 <% }else {%>
-<p>Empty</p>
+<p>No TODOs</p>
 <% }%>
 <% if (notes.length) {%>
 <div class="row mb-n5">
@@ -31,5 +31,5 @@
     <% })%>
 </div>
 <% }else {%>
-<p>Empty</p>
+<p>No notes</p>
 <% }%>
