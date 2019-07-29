@@ -1,0 +1,21 @@
+ <% if (todos.length) {%>
+ <ol>
+     <% todos.forEach(item => {%>
+     <li>
+         <label>
+             <input type="checkbox" name="" id="">
+             <span><%= item.text%></span>
+         </label>
+         <button type="button" class="close" aria-label="Close">
+             <span aria-hidden="true">&times;</span>
+         </button>
+     </li>
+     <% })%>
+ </ol>
+ <% }else {%>
+ <p>No TODOs</p>
+ <% }%>
+ <div class="row block-height">
+     <a href="/todos/create" class="btn btn-primary btn-lg active w-100 fixed-bottom" role="button"
+         aria-pressed="true">Create TODO</a>
+ </div>
