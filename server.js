@@ -4,7 +4,7 @@ const mongoose = require('mongoose')
 const path = require('path')
 
 const config = require('./config')
-const listsRoutes = require('./routes/lists')
+const todoRoutes = require('./routes/todos')
 const notesRoutes = require('./routes/notes')
 const indexRoutes = require('./routes/index')
 
@@ -17,7 +17,7 @@ app.use(express.urlencoded({
 }))
 app.use(express.static(path.join(__dirname, 'static')))
 app.use(expressLayouts)
-app.use(listsRoutes)
+app.use(todoRoutes)
 app.use(notesRoutes)
 app.use(indexRoutes);
 
