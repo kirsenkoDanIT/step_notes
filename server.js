@@ -14,12 +14,12 @@ app.use(express.urlencoded({
     extended: true
 }))
 app.use(express.static(path.join(__dirname, 'static')))
-app.use(expressLayouts);
+app.use(expressLayouts)
 app.use(listsRoutes)
 app.use(notesRoutes)
-app.use(indexRoutes)
+app.use(indexRoutes);
 
-async function start() {
+(async function start() {
     try {
         await mongoose.connect(config.DB, {
             useNewUrlParser: true,
@@ -31,6 +31,4 @@ async function start() {
     } catch (error) {
         console.log(error);
     }
-}
-
-start()
+})()
