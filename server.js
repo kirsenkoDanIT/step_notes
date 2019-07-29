@@ -2,10 +2,12 @@ const express = require('express')
 const expressLayouts = require('express-ejs-layouts')
 const mongoose = require('mongoose')
 const path = require('path')
+
 const config = require('./config')
 const listsRoutes = require('./routes/lists')
 const notesRoutes = require('./routes/notes')
 const indexRoutes = require('./routes/index')
+
 const app = express()
 
 app.set('view engine', 'ejs');
